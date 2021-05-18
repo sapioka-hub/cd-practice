@@ -1,0 +1,849 @@
+body{
+    background: linear-gradient(to bottom left,rgb(158, 203, 255) 50%, #d3fcfd 50%);
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Sawarabi Mincho', sans-serif; 
+    margin:0; 
+    padding:0;
+    display: flex; /*フレックスボックスに有効に */
+    flex-flow: column; /*要素を縦に並べる */
+    min-height: 100vh; /*最小でも画面の高さ分のbodyの高さを担保する */
+}
+
+/*  */
+/*  */
+/*  */
+
+@media screen and (min-width: 1025px) {
+
+    /* ロゴとタイトルの設定ここから */
+    #logo {
+        height:130px;
+        width:130px;
+        margin: 20px 20px 0px 0px;
+        float: left;
+        transition: all 1s;
+    }
+
+    #logo:hover {
+        transform: scale(1.1);
+        box-shadow: 4px 4px 5px rgb(167, 167, 167);
+    }
+
+    #hometitle p {
+        font-weight: bold;;
+        line-height: 167px;
+        font-size: 40px;
+        margin: 0;
+    }
+    /* ロゴとタイトルの設定ここまで */
+
+
+    /* バーの設定ここから */
+    .buttongroup {
+        width: 100%;
+    }
+
+    .buttoninner {
+        padding: 2px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .buttoninner a {
+        border-radius: 2px;
+        width: 230px;
+        height: 60px;
+        line-height: 50px;
+        padding: 7px;
+        margin: 0px 0px 10px 0px;
+        font-size: 23px;
+        text-align: center;
+        text-decoration-line: none;
+        color: white;
+        background-color: rgb(112, 111, 111);
+    }
+
+    .buttoninner a:hover {
+        background-color:rgb(218, 216, 216);
+        color: black;
+    }
+
+    .buttoninner #apply {
+        background-color: #b83f3f;
+        color: white;
+    }
+
+    .buttoninner #apply:hover {
+        background-color:rgb(0, 204, 255);
+        color: black;
+    }
+    /* バーの設定ここまで */
+
+
+    /* トップ画の設定ここから */
+    .coverimg {
+        background:url("../img/cover.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        margin: 5px 0 10px 0;
+        position: relative;
+    }
+    
+    .coverimg h2 {
+        color: white;
+        margin: 0;
+        position: absolute;
+        width: 76%;
+        top: 50%;
+        left: 50%;
+        font-size: 2rem;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    /* トップ画の設定ここまで */
+
+
+    /* リンクボタンの設定ここから */
+    .snsinner {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .snsinner #tw, #fb, #ins, #note {
+        border-radius: 10px;
+        width: 75px;
+        height: 60px;
+        line-height: 40px;
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 19px;
+        text-decoration-line: none;
+        color: white;
+    }
+
+    .snsinner #fb {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 25px;
+        background-color: #3b5998;
+    }
+
+    .snsinner #ins {
+        margin-right: 20px;
+        padding-left: 21px;
+        background-color: #8a3ab9;
+    }
+
+    .snsinner #note {
+        padding-left: 12px;
+        background-color: #30d3c5;
+        font-weight: bold;
+        font-size: 20px;
+        border: 0.1px solid white;
+    }
+
+    .snsinner #tw {
+        background-color: #1DA1F2;
+    }
+
+    .snsinner #tw:hover, #fb:hover, #ins:hover, #note:hover {
+        border:2px solid white;
+        opacity: 0.8;
+    }
+
+    .snsinner #tw:active, #fb:active, #ins:active, #note:active {
+        border:3px solid white;
+        opacity: 0.6;
+    }
+
+    .linkinner {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+    .linkinner #try, #st, #praj, #aka {
+        width: 250px;
+        height: 70px;
+        padding:5px 3px 2px 3px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        background-color: rgb(128, 127, 127);
+    }
+
+    .linkinner #try:hover, #st:hover, #praj:hover {
+        background-color: rgb(19, 52, 241);
+    }
+
+    .linkinner #aka:hover {
+        background-color: #b83f3f;
+    }
+
+    .snsinner i {
+        margin-right: 10px;
+    }
+    /* リンクボタンの設定ここまで */
+
+    /* お知らせタイトル */
+    h3 {
+        display: grid;
+        grid-template-columns:1fr;
+        text-align: center;
+        background-color:#faa19e;
+        color: black;
+        font-size: 23px;
+        border-right:2px solid grey ;
+        border-bottom:2px solid grey ;
+        border-radius: 18px;
+
+        height: 50px;
+        padding-top: 15px;
+    }
+    /* お知らせタイトル */
+
+    /* カードの設定ここから */
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0px;
+        overflow-wrap: break-word;
+        background-color: rgb(255, 255, 255);
+        background-clip: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.125);
+        border-image: initial;
+        border-radius: 0.25rem;
+        transition: all 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 4px 4px 5px rgb(167, 167, 167);
+    }
+
+    .col a {
+        color: black;
+        text-decoration: none;
+    }
+    /* カードの設定ここまで */
+
+    .pastevent  {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .pastevent a {
+        font-size: 18px;
+        color: rgb(83, 83, 83);
+    }
+
+    footer a {
+        font-size: 18px;
+        margin: 2px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        clear: both;
+        height: 100px;
+        line-height: 80px;
+        margin-top: 0px;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color:#faa19e;
+    }
+
+    .breadcrumb a {
+        color: black;
+        margin-right:20px;
+    }
+}
+
+/*  */
+/*  */
+/*  */
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+    /* ロゴとタイトルの設定ここから */
+    #logo {
+        height:100px;
+        width:100px;
+        margin: 20px 20px 0px 0px;
+        float: left;
+        transition: all 1s;
+    }
+
+    #logo:hover {
+        transform: scale(1.1);
+        box-shadow: 4px 4px 5px rgb(167, 167, 167);
+    }
+
+    #hometitle p {
+        font-weight: bold;;
+        line-height: 150px;
+        font-size: 32px;
+        margin: 0;
+    }
+    /* ロゴとタイトルの設定ここまで */
+
+
+    /* バーの設定ここから */
+    .buttongroup {
+        width: 100%;
+    }
+
+    .buttoninner {
+        padding: 2px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .buttoninner a {
+        border-radius: 2px;
+        width: 130px;
+        height: 60px;
+        line-height: 50px;
+        padding: 7px;
+        margin: 0px 0px 10px 0px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration-line: none;
+        color: white;
+        background-color: rgb(112, 111, 111);
+    }
+
+    .buttoninner a:hover {
+        background-color:rgb(218, 216, 216);
+        color: black;
+    }
+
+    .buttoninner #apply {
+        background-color: #b83f3f;
+        color: white;
+    }
+
+    .buttoninner #apply:hover {
+        background-color:rgb(0, 204, 255);
+        color: black;
+    }
+    /* バーの設定ここまで */
+
+
+    /* トップ画の設定ここから */
+    .coverimg {
+        background:  url("../img/cover.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+        margin: 5px 0 10px 0;
+        position: relative;
+    }
+    
+    .coverimg h2 {
+        color: white;
+        margin: 0;
+        position: absolute;
+        width: 83%;
+        top: 50%;
+        left: 50%;
+        font-size: 25px;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    /* トップ画の設定ここまで */
+
+
+    /* リンクボタンの設定ここから */
+    .snsinner {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .snsinner #tw, #fb, #ins, #note {
+        border-radius: 10px;
+        width: 70px;
+        height: 55px;
+        line-height: 40px;
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 16px;
+        text-decoration-line: none;
+        color: white;
+    }
+
+    .snsinner #tw:hover, #fb:hover, #ins:hover, #note:hover {
+        border:2px solid white;
+        opacity: 0.8;
+    }
+
+    .snsinner #tw:active, #fb:active, #ins:active, #note:active {
+        border:3px solid white;
+        opacity: 0.6;
+    }
+
+    .snsinner #fb {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 25px;
+        background-color: #3b5998;
+    }
+
+    .snsinner #ins {
+        padding-left: 22px;
+        margin-right: 10px;        
+        background-color: #8a3ab9;
+    }
+
+    .snsinner #note {
+        padding-top: 8px;
+        padding-left: 25px;
+        padding-left: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: #30d3c5;
+        border: 0.1px solid white;
+    }
+
+    .snsinner #tw {
+        background-color: #1DA1F2;
+    }
+
+    .linkinner {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+    .linkinner #try, #st, #praj, #aka {
+        width: 165px;
+        height: 70px;
+        padding:8px 3px 2px 3px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        background-color: rgb(128, 127, 127);
+    }
+
+    .linkinner #try:hover, #st:hover, #praj:hover {
+        background-color: rgb(19, 52, 241);
+    }
+
+    .linkinner #aka:hover {
+        background-color: #b83f3f;
+    }
+
+    .snsinner i {
+        margin-right: 10px;
+    }
+    /* リンクボタンの設定ここまで */
+
+    /* お知らせタイトル */
+    h3 {
+        display: grid;
+        grid-template-columns:1fr;
+        text-align: center;
+        background-color:#faa19e;
+        color: black;
+        font-size: 20px;
+        border-right:2px solid grey ;
+        border-bottom:2px solid grey ;
+        border-radius: 18px;
+        height: 45px;
+        padding-top: 13px;
+    }
+    /* お知らせタイトル */
+
+    /* カードの設定ここから */
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0px;
+        overflow-wrap: break-word;
+        background-color: rgb(255, 255, 255);
+        background-clip: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.125);
+        border-image: initial;
+        border-radius: 0.25rem;
+        transition: all 0.3s;
+    }
+
+    .card-body h5 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .card-body p {
+        font-size: 16px;
+        line-height:20px;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 4px 4px 5px rgb(167, 167, 167);
+    }
+
+    .col img {
+        max-height: 150px;
+    }
+
+    .col a {
+        color: black;
+        text-decoration: none;
+    }
+    /* カードの設定ここまで */
+
+    .pastevent  {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .pastevent a {
+        font-size: 16px;
+        color: rgb(83, 83, 83);
+    }
+
+    footer a {
+        font-size: 18px;
+        margin: 2px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        clear: both;
+        height: 100px;
+        line-height: 80px;
+        margin-top: 0px;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color:#faa19e;
+    }
+
+    .breadcrumb a {
+        color: black;
+        margin-right:20px;
+    }
+}
+
+/*  */
+/*  */
+/*  */
+
+@media screen and (max-width: 479px) {
+
+    /* ロゴとタイトルの設定ここから */
+    #logo {
+        height:80px;
+        width:80px;
+        margin: 20px 10px 0px 0px;
+        float: left;
+        transition: all 1s;
+    }
+
+    #logo:hover {
+        transform: scale(1.1);
+        box-shadow: 4px 4px 5px rgb(167, 167, 167);
+    }
+
+    #hometitle p {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 32px;
+        padding-top: 30px;
+    }
+
+    /* ロゴとタイトルの設定ここまで */
+
+
+    /* バーの設定ここから */
+    .buttongroup {
+        width: 100%;
+    }
+
+    .buttoninner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .buttoninner a {
+        border-radius: 2px;
+        width: 65px;
+        height: 65px;
+        line-height: 15px;
+        padding: 20px 2px 0px 2px;
+        margin: 5px 0px 2px 0px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration-line: none;
+        color: white;
+        background-color: rgb(112, 111, 111);
+    }
+
+    .buttoninner #intro, #act {
+        padding-top: 26px;
+    }
+
+    .buttoninner a:hover {
+        background-color:rgb(218, 216, 216);
+        color: black;
+    }
+
+    .buttoninner #apply {
+        background-color: #b83f3f;
+        color: white;
+    }
+
+    .buttoninner #apply:hover {
+        background-color:rgb(0, 204, 255);
+        color: black;
+    }
+    /* バーの設定ここまで */
+
+
+    /* トップ画の設定ここから */
+
+    .coverimg {
+        background: url("../img/cover.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 230px;
+        margin: 5px 0 7px 0;
+        position: relative;
+    }
+    
+    .coverimg h2 {
+        color: white;
+        margin: 0;
+        position: absolute;
+        width: 78%;
+        top: 50%;
+        left: 50%;
+        font-size: 18px;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    /* トップ画の設定ここまで */
+
+
+    /* リンクボタンの設定ここから */
+    aside .linkgroup {
+        width: 100%;
+        margin: 0 0 0  auto;
+    }
+
+    aside .snsgroup {
+        width: 100%;
+        margin: 0 0 0  auto;
+    }
+
+    .snsinner {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .snsinner #tw, #fb, #ins, #note {
+        width: 83px;
+        height: 38px;
+        border-radius: 10px;
+        padding:8px 30px 8px 30px;
+        text-decoration-line: none;
+        font-size: 12px;
+        color: white;
+    }
+
+    .snsinner #tw:hover, #fb:hover, #ins:hover, #note:hover {
+        border:2px solid white;
+        opacity: 0.8;
+    }
+
+    .snsinner #tw:active, #fb:active, #ins:active, #note:active {
+        border:3px solid white;
+        opacity: 0.6;
+    }
+
+    .snsinner #fb {
+        padding:8px 30px 8px 33px;     
+        background-color: #3b5998;
+    }
+
+    .snsinner #note {
+        padding:8px 0px 8px 22px;  
+        background-color: #30d3c5;
+        font-size: 15px;
+        font-weight: bold;
+        border: 0.1px solid white;
+    }
+
+    .snsinner #tw {
+        background-color: #1DA1F2;
+    }
+
+    .snsinner #ins {
+        background-color: #8a3ab9;
+    }
+
+    .linkinner {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .linkinner a {
+        width: 82px;
+        height: 40px;
+        border-radius: 10px;
+        padding:8px 30px 8px 30px;
+        font-size: 13px;
+        text-decoration-line: none;
+        color: white;
+        background-color:  rgb(128, 127, 127);
+    }
+
+    .linkinner #try, #st, #praj, #aka {
+        width: 85px;
+        height: 50px;
+        padding:7px 3px 2px 3px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        text-align: center;
+        background-color: rgb(145, 145, 145);
+    }
+
+    .linkinner #try:hover, #st:hover, #praj:hover {
+        background-color: rgb(19, 52, 241);
+    }
+
+    .linkinner #aka:hover {
+        background-color: #b83f3f;
+    }
+
+    .snsinner i {
+        margin-right: 10px;
+    }
+    /* リンクボタンの設定ここまで */
+
+
+    /* お知らせタイトル */
+
+    h3 {
+        display: grid;
+        grid-template-columns:1fr;
+        text-align: center;
+        background-color:#faa19e;
+        color: black;
+        font-size: 16px;
+        border-right:2px solid grey ;
+        border-bottom:2px solid grey ;
+        border-radius: 15px;
+        height: 35px;
+        padding-top: 8px;
+    }
+    /* お知らせタイトル */
+
+    /* カードの設定ここから */
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        min-width: 0px;
+        max-height: 320px;
+        overflow-wrap: break-word;
+        background-color: rgb(255, 255, 255);
+        background-clip: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.125);
+        border-image: initial;
+        border-radius: 0.25rem;
+        transition: all 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 4px 4px 5px rgb(167, 167, 167);
+    }
+
+    .card-body h5 {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .card-body p {
+        font-size: 16px;
+        line-height:18px;
+    }
+
+    .col a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .col img {
+        max-height: 180px;
+    }
+    /* カードの設定ここまで */
+
+    .pastevent {
+        display: flex;
+        justify-content: flex-end;  
+    }
+
+    .pastevent a {
+        font-size: 14px;
+        color: rgb(83, 83, 83);
+        margin-top: 20px;
+    }
+
+    footer a {
+        font-size: 15px;
+        margin: 2px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        clear: both;
+        height: 80px;
+        line-height: 20px;
+        padding: 20px 5px 5px 20px;
+        margin-top: 0px;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color:#faa19e;
+    }
+
+    .breadcrumb a {
+        color: black;
+        margin-right:20px;
+    }
+}
+
+
